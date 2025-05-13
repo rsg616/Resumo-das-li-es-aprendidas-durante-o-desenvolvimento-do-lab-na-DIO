@@ -1,0 +1,46 @@
+# Resumo sobre Criação de Instância de Banco de Dados no Microsoft Azure
+
+## Introdução
+
+Durante este laboratório da DIO, aprendi como configurar uma instância de Banco de Dados na plataforma **Microsoft Azure**, utilizando o serviço de **Instância Gerenciada de SQL**. Esta documentação foi criada para apoiar futuras práticas e implementações relacionadas a banco de dados em ambientes de nuvem.
+
+---
+
+## Principais Conceitos Aprendidos
+
+- **O que é uma Instância Gerenciada de SQL do Azure:**
+  Uma solução de banco de dados como serviço (DBaaS) que combina a compatibilidade quase total do SQL Server com as vantagens da nuvem, como escalabilidade automática, alta disponibilidade e segurança integrada.
+
+- **Vantagens de Usar o Banco de Dados no Azure:**
+  - Alta disponibilidade com failover automático
+  - Backup automático e ponto de restauração
+  - Facilidade de escalar recursos conforme necessário
+  - Segurança reforçada com criptografia de dados em trânsito e em repouso
+
+- **Criação de uma Instância de Banco de Dados:**
+  1. Acessar o portal do Azure: [https://portal.azure.com](https://portal.azure.com)
+  2. Buscar por "Instância Gerenciada de SQL" e clicar em "Criar".
+  3. Preencher:
+     - **Nome da instância**
+     - **Configurações de computação** (número de vCores e memória)
+     - **Configurações de rede** (configurar VNet/Subnet)
+     - **Admin Login** e senha
+  4. Definir regras de firewall para permitir acesso ao banco.
+  5. Revisar e criar.
+
+- **Acesso ao Banco de Dados:**
+  - Conexão via SQL Server Management Studio (SSMS) ou Azure Data Studio.
+  - Usar o **nome do servidor**, **login** e **senha** configurados.
+
+---
+
+## Dicas Úteis
+
+- Sempre defina políticas de segurança fortes, como IPs permitidos e autenticação multifator (MFA).
+- Utilize **grupos de segurança de rede (NSG)** para controlar o tráfego de entrada e saída.
+- Monitore o uso do banco utilizando **Azure Monitor** para otimizar custo e performance.
+- Programe janelas de manutenção para atualizações automáticas fora dos horários críticos.
+- Mantenha cópias de backup e configure políticas de retenção adequadas.
+
+---
+
